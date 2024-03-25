@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c85a1af-746a-450b-95c0-443cd84a0fab" name="Changes" comment="Updated the onNextButtonClick method in the HelloController class to load the main screen when the Next button is clicked AS WELL AS binded the onAction method to the nextButton element in the hello-view.fxml" />
+    <list default="true" id="6c85a1af-746a-450b-95c0-443cd84a0fab" name="Changes" comment="Added the functionality to cancel an edit">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo1/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo1/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo1/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo1/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/demo1/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/demo1/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/demo1/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/demo1/main-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -123,7 +129,55 @@
       <option name="project" value="LOCAL" />
       <updated>1711366336639</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added classes, Contact, IContactDAO and MockContactDAO.">
+      <option name="closed" value="true" />
+      <created>1711366538236</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711366538236</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Updated MainController to use the MockContactDAO to manage the contacts and the syncContacts method is used to synchronize the contacts list view with the contacts in the database, and should be called whenever the contacts in the database change">
+      <option name="closed" value="true" />
+      <created>1711366718941</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711366718941</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added the functionality to view the details of a contact when it is clicked in the ListView: Updated MainController.java">
+      <option name="closed" value="true" />
+      <created>1711367183040</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711367183040</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added the functionality to edit a contact">
+      <option name="closed" value="true" />
+      <created>1711367243575</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711367243575</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added the functionality to delete and add a contact">
+      <option name="closed" value="true" />
+      <created>1711367381729</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711367381729</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added the functionality to cancel an edit">
+      <option name="closed" value="true" />
+      <created>1711367459722</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711367459722</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -134,6 +188,12 @@
     <MESSAGE value="Enable the Next button and bind this method to the CheckBox element in the hello-view.fxml file by adding an onAction=&quot;#onAgreeCheckBoxClick&quot; attribute to the CheckBox element" />
     <MESSAGE value="added MainController and main-view.fxml" />
     <MESSAGE value="Updated the onNextButtonClick method in the HelloController class to load the main screen when the Next button is clicked AS WELL AS binded the onAction method to the nextButton element in the hello-view.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the onNextButtonClick method in the HelloController class to load the main screen when the Next button is clicked AS WELL AS binded the onAction method to the nextButton element in the hello-view.fxml" />
+    <MESSAGE value="Added classes, Contact, IContactDAO and MockContactDAO." />
+    <MESSAGE value="Updated MainController to use the MockContactDAO to manage the contacts and the syncContacts method is used to synchronize the contacts list view with the contacts in the database, and should be called whenever the contacts in the database change" />
+    <MESSAGE value="Added the functionality to view the details of a contact when it is clicked in the ListView: Updated MainController.java" />
+    <MESSAGE value="Added the functionality to edit a contact" />
+    <MESSAGE value="Added the functionality to delete and add a contact" />
+    <MESSAGE value="Added the functionality to cancel an edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the functionality to cancel an edit" />
   </component>
 </project>

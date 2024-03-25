@@ -11,6 +11,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 
+import java.util.List;
+
 public class MainController {
     @FXML
     private ListView<Contact> contactsListView;
@@ -27,6 +29,9 @@ public class MainController {
     private TextField emailTextField;
     @FXML
     private TextField phoneTextField;
+
+    @FXML
+    private VBox contactContainer;
 
     /**
      * Programmatically selects a contact in the list view and
@@ -83,13 +88,31 @@ public class MainController {
      */
     private void syncContacts() {
         contactsListView.getItems().clear();
-        contactsListView.getItems().addAll(contactDAO.getAllContacts());
+        List<Contact> contacts = contactDAO.getAllContacts();
+        Contact currentContact = contactsListView.getSelectionModel().getSelectedItem();
+        boolean hasContact = !contacts.isEmpty();
+        if (hasContact) {
+            contactsListView.getItems().addAll(contacts);
+            // If the current contact is still in the list, re-select it
+            // Otherwise, select the first contact in the list
+            Contact nextContact = contacts.contains(currentContact) ? currentContact : contacts.get(0);
+            contactsListView.getSelectionModel().select(nextContact);
+            selectContact(nextContact);
+        }
+        // Show / hide based on whether there are contacts
+        contactContainer.setVisible(hasContact);
     }
 
     @FXML
     public void initialize() {
         contactsListView.setCellFactory(this::renderCell);
         syncContacts();
+        // Select the first contact and display its information
+        contactsListView.getSelectionModel().selectFirst();
+        Contact firstContact = contactsListView.getSelectionModel().getSelectedItem();
+        if (firstContact != null) {
+            selectContact(firstContact);
+        }
     }
     @FXML
     private void onEditConfirm() {
@@ -141,4 +164,6 @@ public class MainController {
             selectContact(selectedContact);
         }
     }
+
+
 }
