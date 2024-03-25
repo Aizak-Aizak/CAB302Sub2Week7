@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c85a1af-746a-450b-95c0-443cd84a0fab" name="Changes" comment="aaaa">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo1/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo1/HelloApplication.java" afterDir="false" />
-    </list>
+    <list default="true" id="6c85a1af-746a-450b-95c0-443cd84a0fab" name="Changes" comment="HelloController.java update the onHelloButtonClick method to display a different message. Additionally, we will add the terms and conditions to the TextArea element." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +35,6 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/aizak/Documents/CAB302 Week 4/demo1/src/main/resources/org/example/addressbook",
@@ -73,11 +67,38 @@
       <option name="project" value="LOCAL" />
       <updated>1711364046107</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="HelloApplication.java window size change to 640x360 pixels.">
+      <option name="closed" value="true" />
+      <created>1711365040378</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711365040378</updated>
+    </task>
+    <task id="LOCAL-00003" summary="hello-view.fxml display a different welcome message and button text">
+      <option name="closed" value="true" />
+      <created>1711365238177</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711365238177</updated>
+    </task>
+    <task id="LOCAL-00004" summary="HelloController.java update the onHelloButtonClick method to display a different message. Additionally, we will add the terms and conditions to the TextArea element.">
+      <option name="closed" value="true" />
+      <created>1711365320368</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711365320368</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="aaaa" />
-    <option name="LAST_COMMIT_MESSAGE" value="aaaa" />
+    <MESSAGE value="HelloApplication.java window size change to 640x360 pixels." />
+    <MESSAGE value="hello-view.fxml display a different welcome message and button text" />
+    <MESSAGE value="HelloController.java update the onHelloButtonClick method to display a different message. Additionally, we will add the terms and conditions to the TextArea element." />
+    <option name="LAST_COMMIT_MESSAGE" value="HelloController.java update the onHelloButtonClick method to display a different message. Additionally, we will add the terms and conditions to the TextArea element." />
   </component>
 </project>
