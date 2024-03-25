@@ -3,6 +3,9 @@ package org.example.demo1;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.ListCell;
@@ -16,6 +19,28 @@ public class MainController {
         contactDAO = new MockContactDAO();
     }
 
+    @FXML
+    private TextField firstNameTextField;
+    @FXML
+    private TextField lastNameTextField;
+    @FXML
+    private TextField emailTextField;
+    @FXML
+    private TextField phoneTextField;
+
+    /**
+     * Programmatically selects a contact in the list view and
+     * updates the text fields with the contact's information.
+     * @param contact The contact to select.
+     */
+    private void selectContact(Contact contact) {
+        contactsListView.getSelectionModel().select(contact);
+        firstNameTextField.setText(contact.getFirstName());
+        lastNameTextField.setText(contact.getLastName());
+        emailTextField.setText(contact.getEmail());
+        phoneTextField.setText(contact.getPhone());
+    }
+
     /**
      * Renders a cell in the contacts list view by setting the text to the contact's full name.
      * @param contactListView The list view to render the cell for.
@@ -23,6 +48,17 @@ public class MainController {
      */
     private ListCell<Contact> renderCell(ListView<Contact> contactListView) {
         return new ListCell<>() {
+            /**
+             * Handles the event when a contact is selected in the list view.
+             * @param mouseEvent The event to handle.
+             */
+            private void onContactSelected(MouseEvent mouseEvent) {
+                ListCell<Contact> clickedCell = (ListCell<Contact>) mouseEvent.getSource();
+                // Get the selected contact from the list view
+                Contact selectedContact = clickedCell.getItem();
+                if (selectedContact != null) selectContact(selectedContact);
+            }
+
             /**
              * Updates the item in the cell by setting the text to the contact's full name.
              * @param contact The contact to update the cell with.
@@ -34,6 +70,7 @@ public class MainController {
                 // If the cell is empty, set the text to null, otherwise set it to the contact's full name
                 if (empty || contact == null || contact.getFullName() == null) {
                     setText(null);
+                    super.setOnMouseClicked(this::onContactSelected);
                 } else {
                     setText(contact.getFullName());
                 }
